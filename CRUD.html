@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!-- Create the user information CURD in React JS, where user can register, edit the details, delete the  user as require. -- >
+<html>
+        <head>
+            <title>
+                FORM
+            </title>
+              
+        </head>
+            <!-- CSS To add styles to various Elements in form --> 
+            <link rel="stylesheet" type="text/css" href='style.css' />
+               
+<body onload="showTable()">
+    <script src='script.js'>
+        
+        </script>
+    <form  name="registerForm" method="POST"  >
+        <div class="form-group">
+            <label>Name</label>
+            <input type="text" id="name" class='cssname' name="name" autofocus />
+            <br>
+            <label>Email Id</label>
+            <input type="email" class='cssemail' id="emailid" name="emailid" />
+            <br>
+            <label>Password</label>
+            <input type="password" class="csspass" id="password1" name="password1" />
+            <br>
+            <label>Confirm-Password</label>
+            <input type="password" class="csspass" id="password2" name="password2" />
+            <br>            
+            <label>Phone Number</label>
+            <input type="text" class='cssname' id="phone" name="phone" maxlength="10" />
+            <br>
+            <label>Country</label>
+            <select id="country" name="country" onchange="populate('country','state')" >
+                <option value=""></option>
+                <option value="Australia">Australia</option>
+                <option value="India" >India</option>
+                <option value="USA">USA</option>
+            </select>
+            <br>
+            <label>State</label>
+            <select id="state" name="state" onchange="populateCity('state','city')">
+
+            </select>
+            <br>
+            <label>City</label>
+            <select id="city"  name="city" ></select>
+            <br>
+            <input type="submit" onclick="return formValidation()" class='submit_button'>
+            <input type="reset" class='reset_button'>
+
+            
+        </div>
+    </form>
+        <div>
+            <table id="infotable" class='infotable'>
+                <td>
+                    <th>NAME</th>
+                    <th>Email Id</th>
+                    <th>Phone Number</th>
+                    <th>Country</th>
+                    <th>State</th>
+                    <th>City</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </td>
+                
+
+            </table>
+        </div>
+</body>
+</html>
